@@ -1,25 +1,16 @@
-#include <bits/stdc++.h>
-
-int main(){
-  int n;
-  std::cin>>n;
-  std::string in;
-  int* p = (int*) calloc(n,sizeof(int));
+#include <string>
+#include <iostream>
  
-  int sum = 0;
-  for(int i = 0; i < n; i++){
-    for(int j = 0; j < 3; j++){
-      std::cin>>in;
-      sum += std::stoi(in); 
-    }
-    p[i] = sum;
-    sum = 0;
-  }
-
-  int ans = 0;
-  for(int t = 0; t < n; t++) if(p[t]>=2) ans++;
-  std::cout<<ans;
-
-  free(p);
-  return 0;
+int main(){
+  int n, x(0);
+	char s[101];
+	scanf("%d", &n);
+  
+  while(n--){
+		scanf("%s",s);
+		s[1] == '+' ? ++x : --x;
+	}
+  
+	std::cout<<x<<std::endl;
+	return 0;
 }
